@@ -1,0 +1,22 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/client/auth/data-access/src",
+  "prefix": "secure-jwt",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/client/auth/data-access"],
+      "options": {
+        "jestConfig": "libs/client/auth/data-access/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/client/auth/data-access/**/*.ts", "libs/client/auth/data-access/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

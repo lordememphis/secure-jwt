@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-feature-auth": "libs/api/feature-auth",
+    "api-interfaces": "libs/api-interfaces",
+    "client": "apps/client",
+    "client-auth-data-access": "libs/client/auth/data-access",
+    "client-auth-feature-auth": "libs/client/auth/feature-auth",
+    "client-core-carbon": "libs/client/core/carbon",
+    "client-e2e": "apps/client-e2e",
+    "client-feature-dashboard": "libs/client/feature-dashboard",
+    "client-feature-shell": "libs/client/feature-shell"
+  }
+}

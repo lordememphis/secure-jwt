@@ -1,0 +1,26 @@
+<div class="form-container">
+  <form (ngSubmit)="login()" [formGroup]="form">
+    <h3>Sign into your account</h3>
+    <section>
+      <ibm-label> Username
+        <input autocomplete="username" formControlName="username" ibmText placeholder="Enter account username" required
+               size="md">
+      </ibm-label>
+    </section>
+
+    <section>
+      <ibm-label> Password
+        <input formControlName="password" ibmText placeholder="Enter account password" required size="md"
+               type="password">
+      </ibm-label>
+    </section>
+
+    <section>
+      <button [isExpressive]="true" ibmButton="primary" size="field">Sign In</button>
+    </section>
+
+    <section>
+      <a [inline]="false" ibmLink routerLink="/auth/signup">Create account?</a>
+    </section>
+  </form>
+</div>

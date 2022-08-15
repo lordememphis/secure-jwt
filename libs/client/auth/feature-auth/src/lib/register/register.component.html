@@ -1,0 +1,25 @@
+<div class="form-container">
+  <form (ngSubmit)="createAccount()" [formGroup]="form">
+    <h3>Create an account</h3>
+    <section>
+      <ibm-label> Username
+        <input autocomplete="username" formControlName="username" ibmText placeholder="Pick a username" required
+               size="md">
+      </ibm-label>
+    </section>
+
+    <section>
+      <ibm-label> Password
+        <input formControlName="password" ibmText placeholder="Pick a password" required size="md" type="password">
+      </ibm-label>
+    </section>
+
+    <section>
+      <button [isExpressive]="true" ibmButton="primary" size="field">Create account</button>
+    </section>
+
+    <section>
+      <a [inline]="false" ibmLink routerLink="/auth/signin">Have an account?</a>
+    </section>
+  </form>
+</div>
