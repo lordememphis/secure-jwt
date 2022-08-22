@@ -1,7 +1,8 @@
 import { Component } from "@angular/core";
 import { FormBuilder } from "@angular/forms";
 import { Router } from "@angular/router";
-import { AuthDto, AuthService } from "@secure-jwt/client/auth/data-access";
+import { AuthDto } from "@secure-jwt/api-interfaces";
+import { AuthService } from "@secure-jwt/client/auth/data-access";
 
 @Component({
   selector: "secure-jwt-register",

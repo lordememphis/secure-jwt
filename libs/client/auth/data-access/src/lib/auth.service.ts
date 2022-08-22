@@ -1,19 +1,10 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
+import { User } from "@prisma/client";
+import { AuthDto, AuthResponse } from "@secure-jwt/api-interfaces";
 import { tap } from "rxjs";
 import { AuthInterceptor } from "./auth.interceptor";
-
-export interface AuthDto {
-  username: string;
-  password: string;
-}
-
-export interface User {
-  username: string;
-  createdAt: string;
-  updatedAt: string;
-}
 
 @Injectable({ providedIn: "root" })
 export class AuthService {
@@ -25,7 +16,7 @@ export class AuthService {
 
   signin(dto: AuthDto) {
     return this.http
-      .post<{ access_token: string }>("/api/auth/signin", dto)
+      .post<AuthResponse>("/api/auth/signin", dto)
       .pipe(tap((tokens) => (AuthInterceptor.access_token = tokens.access_token)));
   }
 
@@ -38,7 +29,7 @@ export class AuthService {
   }
 
   refreshToken() {
-    return this.http.post<{ access_token: string }>("/api/auth/refresh", null).pipe(
+    return this.http.post<AuthResponse>("/api/auth/refresh", null).pipe(
       tap((tokens) => {
         if (tokens) AuthInterceptor.access_token = tokens.access_token;
         else this.router.navigate(["/auth"]);
