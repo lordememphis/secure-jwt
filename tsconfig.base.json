@@ -17,6 +17,7 @@
     "paths": {
       "@secure-jwt/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@secure-jwt/api/feature-auth": ["libs/api/feature-auth/src/index.ts"],
+      "@secure-jwt/api/prisma": ["libs/api/prisma/src/index.ts"],
       "@secure-jwt/client/auth/data-access": ["libs/client/auth/data-access/src/index.ts"],
       "@secure-jwt/client/auth/feature-auth": ["libs/client/auth/feature-auth/src/index.ts"],
       "@secure-jwt/client/core/carbon": ["libs/client/core/carbon/src/index.ts"],

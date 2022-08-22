@@ -1,10 +1,9 @@
 import { Module } from "@nestjs/common";
-import { MongooseModule } from "@nestjs/mongoose";
 import { AccessTokenGuardProvider, AuthModule } from "@secure-jwt/api/feature-auth";
-import { environment } from "../environments/environment";
+import { PrismaModule } from "@secure-jwt/api/prisma";
 
 @Module({
-  imports: [AuthModule, MongooseModule.forRoot(environment.DATABASE)],
+  imports: [AuthModule, PrismaModule],
   providers: [AccessTokenGuardProvider],
 })
 export class AppModule {}

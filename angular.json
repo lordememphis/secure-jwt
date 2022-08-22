@@ -5,6 +5,7 @@
     "api": "apps/api",
     "api-feature-auth": "libs/api/feature-auth",
     "api-interfaces": "libs/api-interfaces",
+    "api-prisma": "libs/api/prisma",
     "client": "apps/client",
     "client-auth-data-access": "libs/client/auth/data-access",
     "client-auth-feature-auth": "libs/client/auth/feature-auth",
