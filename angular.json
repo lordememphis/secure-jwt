@@ -3,7 +3,7 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
-    "api-feature-auth": "libs/api/feature-auth",
+    "api-auth": "libs/api/auth",
     "api-interfaces": "libs/api-interfaces",
     "api-prisma": "libs/api/prisma",
     "client": "apps/client",

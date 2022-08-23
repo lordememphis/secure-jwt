@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: "api-feature-auth",
+  displayName: "api-auth",
   preset: "../../../jest.preset.js",
   globals: {
     "ts-jest": {
@@ -12,5 +12,5 @@ export default {
     "^.+\\.[tj]s$": "ts-jest",
   },
   moduleFileExtensions: ["ts", "js", "html"],
-  coverageDirectory: "../../../coverage/libs/api/feature-auth",
+  coverageDirectory: "../../../coverage/libs/api/auth",
 };

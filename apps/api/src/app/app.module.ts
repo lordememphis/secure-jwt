@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { AccessTokenGuardProvider, AuthModule } from "@secure-jwt/api/feature-auth";
+import { AccessTokenGuardProvider, AuthModule } from "@secure-jwt/api/auth";
 import { PrismaModule } from "@secure-jwt/api/prisma";
 
 @Module({
